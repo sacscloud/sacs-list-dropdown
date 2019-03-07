@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>sacs-list-dropdown demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../sacs-list-dropdown.html">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
+</head>
+
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic sacs-list-dropdown demo</h3>
+    <demo-snippet>
+      <template>
+        <button onclick="display()">Show or hidden</button>
+        <sacs-list-dropdown data-list='[
+        {"name":"jeans", "id":"1"},
+        {"name":"jeans", "id":"2"},
+        {"name":"jeans", "id":"3"},
+        {"name":"jeans", "id":"4"},
+        {"name":"jeans", "id":"5"}
+    ]'></sacs-list-dropdown>
+      </template>
+    </demo-snippet>
+  </div>
+
+  <script>
+
+
+    function display() {
+
+      var component = document.querySelector('sacs-list-dropdown');
+
+      if (component.style.display === "none" || component.style.display === "") {
+        component.style.display = "block";
+      } else if (component.style.display === "block") {
+        component.style.display = "none";
+      }
+
+    }
+  </script>
+</body>
+
+</html>

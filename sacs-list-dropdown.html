@@ -1,0 +1,17 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-item/paper-item.html">
+
+<link rel="import" href="./sacs-list-dropdown-styles.html">
+
+<dom-module id="sacs-list-dropdown">
+  <template>
+    <style include="sacs-list-dropdown-styles"></style>
+    <div class="list_dropdown">
+      <template is="dom-repeat" items="[[dataList]]">
+        <paper-item data-id$="[[item.id]]" data-name$="[[item.name]]">[[item.name]]</paper-item>
+      </template>
+    </div>
+  </template>
+
+  <script src="./sacs-list-dropdown.js"></script>
+</dom-module>
