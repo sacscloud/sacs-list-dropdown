@@ -13,11 +13,12 @@ Polymer({
         this.$$(".list_dropdown").addEventListener("click", function (e) {
             const itemSelected = e.target.getAttribute('data-id');
             const name = e.target.getAttribute('data-name');
+            const type = e.target.getAttribute('data-type');
 
             this.dispatchEvent(new CustomEvent('item-selected', {
                 bubbles: true,
                 composed: true,
-                detail: { itemSelected: itemSelected, name: name }
+                detail: { itemSelected, name, type }
             }));
         });
     },

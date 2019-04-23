@@ -8,7 +8,7 @@
     <style include="sacs-list-dropdown-styles"></style>
     <div class="list_dropdown">
       <template is="dom-repeat" items="[[dataList]]">
-        <paper-item data-id$="[[item.id]]" data-name$="[[item.name]]">[[item.name]]</paper-item>
+        <paper-item data-id$="[[item.id]]" data-name$="[[item.name]]" data-type$="[[item.type]]">[[item.name]]</paper-item>
       </template>
     </div>
   </template>
