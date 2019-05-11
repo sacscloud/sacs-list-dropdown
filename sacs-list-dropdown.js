@@ -8,8 +8,9 @@ Polymer({
             value: []
         }
     },
-
+    
     attached: function () {
+       
         this.$$(".list_dropdown").addEventListener("click", function (e) {
             const itemSelected = e.target.getAttribute('data-id');
             const name = e.target.getAttribute('data-name');

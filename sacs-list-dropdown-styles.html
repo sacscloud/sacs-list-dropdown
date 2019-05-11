@@ -3,12 +3,35 @@
         <style>
             :host {
                 display: none;
+                --sacs-list-dropdown-horizontal-scroll-color: #36c6d3;
+                --sacs-list-dropdown-horizontal-scroll-hover-color: #0de3f6;
             }
 
             .list_dropdown {
-                width: 250px;
+                width: 225px;
                 border: 2px solid #f2f2f2;
                 box-shadow: 2px 4px 5px gray;
+                max-height: 300px;
+                max-width: 250px;
+                overflow-y: auto;
+                overflow-x: auto;
+                background: #f2f2f2;
+                position: absolute;
+                z-index: 100;
+                margin: 30px;
+               
+            }
+
+               
+
+            .list_dropdown::-webkit-scrollbar-thumb {
+              background: var(--sacs-list-dropdown-horizontal-scroll-color);
+              border-radius: 4px;
+            }
+      
+            .list_dropdown::-webkit-scrollbar-thumb:hover {
+              background: var(--sacs-list-dropdown-horizontal-scroll-hover-color);
+              box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
             }
         </style>
     </template>

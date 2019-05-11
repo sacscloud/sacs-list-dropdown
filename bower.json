@@ -1,6 +1,6 @@
 {
   "name": "sacs-list-dropdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "list of element to show in card",
   "main": "sacs-list-dropdown.html",
   "authors": [
